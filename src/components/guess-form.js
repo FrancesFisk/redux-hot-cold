@@ -9,10 +9,10 @@ export class GuessForm extends React.Component {
   onSubmit(event) {
     event.preventDefault();
 
-    const value = this.input.value;
+    const value = this.fred.value;
     this.props.dispatch(makeGuess(value));
-    this.input.value = '';
-    this.input.focus();
+    this.fred.value = '';
+    this.fred.focus();
   }
 
   render() {
@@ -27,7 +27,7 @@ export class GuessForm extends React.Component {
           max="100"
           autoComplete="off"
           aria-labelledby="feedback"
-          ref={input => (this.input = input)}
+          ref={input => (this.fred = input)}
           required
         />
         <button 
